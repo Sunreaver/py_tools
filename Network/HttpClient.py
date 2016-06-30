@@ -17,7 +17,7 @@ class HttpClient:
         rc = self.http.getresponse()
         if rc.status == http.HTTPStatus.OK:
             return rc.read()
-        return ""
+        return None
 
     def Post(self, url="", body=None, headers={}):
         '''http Post方法'''
@@ -25,7 +25,7 @@ class HttpClient:
         rc = self.http.getresponse()
         if rc.status == http.HTTPStatus.OK:
             return rc.read()
-        return ""
+        return None
 
     def ResetHost(self, host):
         '''重新设置Http的host'''
